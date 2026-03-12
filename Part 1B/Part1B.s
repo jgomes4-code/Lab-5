@@ -1,4 +1,4 @@
-	.file	"Part2.c"
+	.file	"Part1B.c"
 	.text
 	.section	.text.startup,"ax",@progbits
 	.p2align 4
@@ -7,7 +7,6 @@
 main:
 .LFB23:
 	.cfi_startproc
-	endbr64
 	xorl	%eax, %eax
 	ret
 	.cfi_endproc
@@ -15,7 +14,7 @@ main:
 	.size	main, .-main
 	.globl	string
 	.data
-	.align 16
+	.align 4
 	.type	string, @object
 	.size	string, 22
 string:
@@ -37,21 +36,5 @@ c:
 	.size	a, 4
 a:
 	.long	1
-	.ident	"GCC: (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+	.ident	"GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
 	.section	.note.GNU-stack,"",@progbits
-	.section	.note.gnu.property,"a"
-	.align 8
-	.long	1f - 0f
-	.long	4f - 1f
-	.long	5
-0:
-	.string	"GNU"
-1:
-	.align 8
-	.long	0xc0000002
-	.long	3f - 2f
-2:
-	.long	0x3
-3:
-	.align 8
-4:
